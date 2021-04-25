@@ -7,6 +7,7 @@ import CustomTheme from './assests/theme/ThemeRtl.js';
 import './assests/fonts/css/fontiran.css';
 
 import Main from './Components/layout/index.js';
+import { Container, Grid, Typography } from '@material-ui/core';
 
 
 // Configure JSS
@@ -18,11 +19,18 @@ function App() {
   return (
     <ThemeProvider theme={CustomTheme}>
     <StylesProvider jss={jss}>
-      <div>
-      
-       <Main/>
-      </div>
-   
+      <Grid container >
+      <Grid itrem xs={3}>
+        <Typography>سلاممم</Typography>
+      </Grid>
+      <Grid itrem xs={9}>
+        <Container maxWidth="md">
+        <Typography>
+          من از اینجا دارم به فردا فکر میکنم
+        </Typography>
+        </Container>
+      </Grid>
+      </Grid>
       
     </StylesProvider>
     </ThemeProvider>
